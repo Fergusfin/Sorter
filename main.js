@@ -1,8 +1,20 @@
-const fs = require('fs');
-var ptn = require('parse-torrent-name');
+//this is not yet an app this is testing
 
-console.log(fs.readdirSync("//10.0.1.32/Media/Downloads"));
+const fs = require('fs')
+var ptn = require('parse-torrent-name')
 
-//var test = ptn("Frozen.2013.1080p.WEB-DL.H264-PublicHD");
+DownloadPath = "//10.0.1.32/Media/Downloads"
 
-//console.log(test.title)
+Downloads = fs.readdirSync(DownloadPath)
+
+for(i=0; i<Downloads.length; i++){
+	item = ptn(Downloads[i])
+	if(item.season != null && item.episode != null){
+		console.log("TV Show")
+		console.log(item.season)
+		console.log(item.episode)
+	}
+	else if(item.season == null && item.episodeName == null && item.episode == null) console.log("Movie")
+	else console.log("Unsure")
+	console.log(item.title)
+}
