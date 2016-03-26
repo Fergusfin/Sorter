@@ -18,8 +18,8 @@ class Framework extends Component {
     componentWillMount() {
         this.workers = new InitWorkers()
         this.workers.once('initiated', () => {
-            if (!this.mounted) return _.defer(() => this.setState({ initializing: false }))
-            this.setState({ initializing: false })
+            return
+            _.defer(() => this.setState({ initializing: false }))
         })
     }
 

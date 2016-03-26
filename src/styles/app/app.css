@@ -39,3 +39,47 @@
 body {
     background-color: #17181b;
 }
+
+
+
+.loading-spinner-wrapper {
+    width: 100vw;
+    position: absolute;
+    height: 100vh;
+    text-align: center;
+}
+
+.loading-spinner-wrapper .loading-spinner {
+    width: 50px;
+    height: 50px;
+    margin-top: 45vh;
+    display: inline-block;
+    text-align: left;
+}
+
+.loading-spinner-wrapper .status-btn {
+    color: #fff;
+    opacity: .6;
+    position: relative;
+    top: -30px;
+}
+
+.loading-spinner-wrapper .status-text {
+    width: 50vw;
+    line-height: 25px;
+    color: white;
+    opacity: .6;
+    padding-left: 25vw;
+    padding-right: 25vw;
+    font-size: 20px;
+    font-weight: 200;
+    position: fixed;
+    margin-top: calc(45vh - 65px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dialog-button {
+    font-weight: 400;
+}
