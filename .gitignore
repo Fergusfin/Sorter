@@ -1,0 +1,15 @@
+.DS_Store
+.swp
+
+build
+release
+dist
+
+bower_components
+node_modules
+build_cache
+npm-debug.log
+
+cache
+.gulp-scss-cache
+.eslintrc.json
