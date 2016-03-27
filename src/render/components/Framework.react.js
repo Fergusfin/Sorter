@@ -16,8 +16,7 @@ class Framework extends Component {
     componentWillMount() {
         this.workers = new InitWorkers()
         this.workers.once('initiated', () => {
-            return
-            _.defer(() => this.setState({ initializing: false }))
+            // _.defer(() => this.setState({ initializing: false }))
         })
     }
 
