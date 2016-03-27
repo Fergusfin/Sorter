@@ -13,8 +13,6 @@ class Framework extends Component {
         pageData: {}
     };
 
-    mounted = false;
-
     componentWillMount() {
         this.workers = new InitWorkers()
         this.workers.once('initiated', () => {
@@ -24,7 +22,6 @@ class Framework extends Component {
     }
 
     componentDidMount() {
-        this.mounted = true
         this.addDaDots()
     }
 
